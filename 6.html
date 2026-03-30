@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			height: 100px;
+			width: 100px;
+			background-color: blue;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<button class="btn1">Увеличь меня</button>
+	<button class="btn2">Уменьши меня</button>
+	<script>
+		//6. По нажатию на кнопку "Увеличь меня" див уменьшается, по нажатию на кнопку "Уменьши меня" див уменьшается.
+		const box = document.querySelector('.box');
+		const btn1 = document.querySelector('.btn1');
+		const btn2 = document.querySelector('.btn2');
+		let size = 100;
+		btn1.addEventListener('click', () => {
+			size += 40;
+			box.style.width = size + 'px';
+			box.style.height = size + 'px';
+		});
+		btn2.addEventListener('click', () => {
+			size -= 40;
+			box.style.width = size + 'px';
+			box.style.height = size + 'px';
+		});
+
+	</script>
+</body>
+</html>
